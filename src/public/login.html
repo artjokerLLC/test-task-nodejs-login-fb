@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/public/style.css" rel="stylesheet" type="text/css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+        <div class="omb_login">
+            <h3 class="omb_authTitle">Login with </h3>
+            <div class="row omb_row-sm-offset-3 omb_socialButtons">
+                <div class="col-xs-12 col-sm-6">
+                    <a href="/v1/authentication/facebook" class="btn btn-lg btn-block omb_btn-facebook">
+                        <i class="fa fa-facebook visible-xs"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <% if(user){ %>
+        <pre class="user-data"><%= JSON.stringify(user, null ,2).trim() %></pre>
+        <% } %>
+
+    </div>
+
+</body>
+</html>
